@@ -5,9 +5,9 @@ You learn how to provision storage resources, manage queue messages, and clean u
 
 Tasks performed in this exercise:
 >>> 1. Create Azure Queue storage resources
-    2. Assign a role to your Microsoft Entra user name
-    3. Create a .NET console app to send and receive messages
-    4. Clean up resources
+ >   2. Assign a role to your Microsoft Entra user name
+  >  3. Create a .NET console app to send and receive messages
+   > 4. Clean up resources
 
 
 Create Azure Queue storage resources
@@ -28,7 +28,7 @@ In this project, your Resource Group has already been created and named (myResou
 #BASH 1
 >>> az group create --name myResourceGroup --location eastus
 
-Many of the commands require unique names and use the same parameters. Creating some variables will reduce the changes needed to the commands that create resources. Run the following commands to create the needed variables. 
+>> Many of the commands require unique names and use the same parameters. Creating some variables will reduce the changes needed to the commands that create resources. Run the following commands to create the needed variables. 
 Replace myResourceGroup with the name you're using for this exercise. 
 If you changed the location in the previous step, make the same change in the location variable.
 
@@ -36,20 +36,20 @@ If you changed the location in the previous step, make the same change in the lo
 >>> resourceGroup=myResourceGrouplod54676835
   > location=eastus
   > storAcctName=storactname54676835
-You will need the name assigned to the storage account later in this exercise.
-Run the following command and record the output.
+>You will need the name assigned to the storage account later in this exercise.
+>Run the following command and record the output.
 
 #BASH 3
 >>> echo $storAcctName
-Run the following command to create a storage account using the variable you created earlier.
-The operation takes a few minutes to complete.
+>Run the following command to create a storage account using the variable you created earlier.
+>The operation takes a few minutes to complete.
 
 #BASH 4
 >>> az storage account create --resource-group $resourceGroup \
   > --name $storAcctName --location $location --sku Standard_LRS
-Assign a role to your Microsoft Entra user name
-To allow your app to send and receive messages, assign your Microsoft Entra user to the Storage Queue Data Contributor role.
-This gives your user account permission to create queues and send/receive messages using Azure RBAC.
+>Assign a role to your Microsoft Entra user name
+>To allow your app to send and receive messages, assign your Microsoft Entra user to the Storage Queue Data Contributor role.
+>This gives your user account permission to create queues and send/receive messages using Azure RBAC.
 Perform the following steps in the cloud shell.
 
 Run the following command to retrieve the userPrincipalName from your account. This represents who the role will be assigned to.
