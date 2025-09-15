@@ -83,17 +83,17 @@ Create the .NET console application.
 
 #BASH 9
 >>> dotnet new console
-Run the following commands to add the Azure.Storage.Queues and Azure.Identity packages to the project.
+>>.Run the following commands to add the Azure.Storage.Queues and Azure.Identity packages to the project.
 
 #BASH 10
 >>> dotnet add package Azure.Storage.Queues
->   dotnet add package Azure.Identity
-Add the starter code for the project
-Run the following command in the Cloud Shell to begin editing the application.
+>>>   dotnet add package Azure.Identity
+>.Add the starter code for the project
+>.Run the following command in the Cloud Shell to begin editing the application.
 
 #BASH 11
 >>> code Program.cs
-Replace any existing contents with the following code. Be sure to review the comments in the code, and replace with the storage account name you recorded earlier.
+>.Replace any existing contents with the following code. Be sure to review the comments in the code, and replace with the storage account name you recorded earlier.
 
 .NET SECTION
 ```csharp
